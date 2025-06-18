@@ -1,1 +1,2 @@
 # OPERADOR-TERNIARIO
+- lista 01
