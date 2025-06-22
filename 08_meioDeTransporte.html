@@ -19,5 +19,5 @@
     mensagem = ``;
     (precoTotalC > precoTotalT )? mensagem = `O meio de transporte mais barato é o transporte público, custando R$ ${precoTotalT.toFixed(2)} por dia (ida e volta).` : (precoTotalT < precoTotalC)? mensagem = `O meio de transporte mais barato é o carro, custando R$ ${precoTotalC.toFixed(2)} por dia (ida e volta).` : mensagem = `Ambos os meios de transporte custam o mesmo valor: R$ ${precoTotalC.toFixed(2)} por dia (ida e volta).`
     //SAÍDA
-    alert(`${mensagem}`)
+    alert(mensagem)
 </script>
