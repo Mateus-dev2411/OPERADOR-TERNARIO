@@ -1,27 +1,27 @@
-<meta charset=`UTF-8`>
+<meta charset="UTF-8">
 <script>
     /*
-    PROBLEMA: AUMENTO DE PREÇO
-    Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
-    - até 280(inclusive): aumento de 20 %
-    - até 700(inclusive): aumento de 15 %
-    - até 1500(inclusive): aumento de 10 %
-    - acima de 1500: aumento de 5 %
+    PROBLEMA: NOTA PARA CONCEITO
+    Converta a nota para conceito, conforme a tabela abaixo:
+    Nota                     Conceito
+    Entre 10.0 e 9.0            A
+    Entre 8.9 e 8.0             B
+    Entre 7.9 e 7.0             C
+    Entre 6.9 e 6.0             D
+    Entre 5.9 e zero            E
     */
 
     //ENTRADA
-    const preco = Number(prompt(`Informe o preço do produto:`));
+    const nota = Number(prompt("Informe a nota (0 a 10):"));
 
     //PROCESSAMENTO
-    let percentual = 0;
-    (preco <= 280) ? percentual = 20 :
-    (preco <= 700) ? percentual = 15 :
-    (preco <= 1500) ? percentual = 10 :
-    percentual = 5;
-
-    const aumento = preco * percentual / 100;
-    const novoPreco = preco + aumento;
+    (nota >= 9 && nota <= 10) ? conceito = "A" :
+    (nota >= 8 && nota < 9)  ? conceito = "B" :
+    (nota >= 7 && nota < 8)  ? conceito = "C" :
+    (nota >= 6 && nota < 7)  ? conceito = "D" :
+    (nota >= 0 && nota < 6)  ? conceito = "E" :
+    conceito = "Nota inválida";
 
     //SAÍDA
-    alert(`Percentual de aumento: ${percentual}%\nValor do aumento: R$ ${aumento.toFixed(2)}\nNovo preço: R$ ${novoPreco.toFixed(2)}`);
+    alert(`Conceito: ${conceito}`);
 </script>
