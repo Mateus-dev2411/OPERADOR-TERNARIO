@@ -10,17 +10,17 @@
     */
 
     //ENTRADA
-    const idadeCao = Number(prompt("Informe a idade do cão:"));
-    const porte = prompt("Informe o porte do cão (pequeno, médio ou grande):").toLowerCase();
+    const idadeCao = Number(prompt(`Informe a idade do cão:`));
+    const porte = prompt(`Informe o porte do cão \npequeno-p \nmédio-m \ngrande-g`).toLowerCase();
 
     //PROCESSAMENTO
-    (porte === "pequeno") ? 5 :
-    (porte === "médio" || porte === "medio") ? 6 :
-    (porte === "grande") ? 7 :
-    0;
+    idadeCH = 0;
+    (porte === "p") ? fator = 5 :
+    (porte === "m") ? fator = 6 :
+    (porte === "g") ? fotor = 7 :
+    fator = 0;
 
-    const idadeHumana = fator > 0 ? idadeCao * fator : "Porte inválido";
-
+    (idadeCao > 0)? idadeCH = idadeCao * fator : `Porte inválido`;
     //SAÍDA
-    alert(`Idade humana equivalente: ${idadeHumana}`);
+    alert(`Idade humana equivalente: ${idadeCH}`);
 </script>
